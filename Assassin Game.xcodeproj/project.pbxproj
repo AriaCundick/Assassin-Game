@@ -13,6 +13,7 @@
 		02C710B51B2944880063F559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C710B41B2944880063F559 /* Images.xcassets */; };
 		02C710B81B2944880063F559 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C710B61B2944880063F559 /* LaunchScreen.xib */; };
 		02C710C41B2944890063F559 /* Assassin_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C710C31B2944890063F559 /* Assassin_GameTests.swift */; };
+		02C710CE1B295C0C0063F559 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C710CD1B295C0C0063F559 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		02C710BD1B2944890063F559 /* Assassin GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assassin GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C710C21B2944890063F559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C710C31B2944890063F559 /* Assassin_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assassin_GameTests.swift; sourceTree = "<group>"; };
+		02C710CD1B295C0C0063F559 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				02C710AD1B2944880063F559 /* AppDelegate.swift */,
 				02C710AF1B2944880063F559 /* ViewController.swift */,
+				02C710CD1B295C0C0063F559 /* SettingsViewController.swift */,
 				02C710B11B2944880063F559 /* Main.storyboard */,
 				02C710B41B2944880063F559 /* Images.xcassets */,
 				02C710B61B2944880063F559 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				02C710B01B2944880063F559 /* ViewController.swift in Sources */,
 				02C710AE1B2944880063F559 /* AppDelegate.swift in Sources */,
+				02C710CE1B295C0C0063F559 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
