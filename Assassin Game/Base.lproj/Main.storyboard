@@ -210,7 +210,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Targets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO5-dy-VpI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Targets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO5-dy-VpI">
                                 <rect key="frame" x="62" y="544" width="156" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="1Fi-gL-gBu"/>
@@ -271,6 +271,7 @@
                             <constraint firstItem="POd-EL-VFo" firstAttribute="top" secondItem="3Mh-gj-TQF" secondAttribute="bottom" constant="8" id="noS-Pz-9K1"/>
                             <constraint firstItem="CO5-dy-VpI" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="sz2-TP-jJm"/>
                             <constraint firstItem="gHO-zn-tTr" firstAttribute="top" secondItem="hzf-4P-7YB" secondAttribute="bottom" constant="8" id="vGn-WW-jq9"/>
+                            <constraint firstItem="CO5-dy-VpI" firstAttribute="top" secondItem="kXv-f5-v4I" secondAttribute="bottom" constant="8" id="vuw-HB-hZz"/>
                             <constraint firstItem="kXv-f5-v4I" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="yCV-cn-3Om"/>
                         </constraints>
                     </view>
