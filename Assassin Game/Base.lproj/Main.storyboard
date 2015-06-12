@@ -234,7 +234,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseImageFromCamera" destination="5BX-4b-6tj" eventType="touchUpInside" id="Nzy-jM-Hmb"/>
+                                    <action selector="chooseImageFromCamera" destination="5BX-4b-6tj" eventType="touchUpInside" id="oHc-hW-bWY"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ra-Lp-FPI">
@@ -244,6 +244,21 @@
                                     <constraint firstAttribute="width" constant="49" id="GuA-YI-q0s"/>
                                 </constraints>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-qr-ZdF">
+                                <rect key="frame" x="230" y="266" width="124" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="VAp-Gk-afO"/>
+                                    <constraint firstAttribute="height" constant="30" id="eLW-u5-wNs"/>
+                                </constraints>
+                                <state key="normal" title="Change name">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeNameButton:" destination="0V2-Aj-6TP" eventType="touchUpInside" id="jXX-AP-cFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66810778479999999" green="1" blue="0.84026733980000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -252,6 +267,7 @@
                             <constraint firstItem="J8b-Un-qvj" firstAttribute="leading" secondItem="hzf-4P-7YB" secondAttribute="trailing" constant="28" id="9cq-go-ubJ"/>
                             <constraint firstItem="hzf-4P-7YB" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leading" constant="24" id="ASE-1R-Vno"/>
                             <constraint firstItem="3Mh-gj-TQF" firstAttribute="top" secondItem="k7E-x1-G0r" secondAttribute="bottom" constant="26" id="DPY-TU-qCz"/>
+                            <constraint firstItem="ch3-qr-ZdF" firstAttribute="leading" secondItem="hzf-4P-7YB" secondAttribute="trailing" constant="28" id="Etc-fM-blI"/>
                             <constraint firstItem="97P-pL-fib" firstAttribute="top" secondItem="3Mh-gj-TQF" secondAttribute="bottom" constant="8" id="IhI-bN-DjA"/>
                             <constraint firstItem="kXv-f5-v4I" firstAttribute="top" secondItem="POd-EL-VFo" secondAttribute="bottom" constant="8" id="J1C-cW-6br"/>
                             <constraint firstItem="POd-EL-VFo" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="Prr-A6-QH1"/>
@@ -267,6 +283,7 @@
                             <constraint firstItem="3Mh-gj-TQF" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="8" id="eI5-Fb-EWd"/>
                             <constraint firstItem="J8b-Un-qvj" firstAttribute="top" secondItem="xnQ-eg-ojn" secondAttribute="bottom" constant="18" id="f1v-6P-Vku"/>
                             <constraint firstItem="xnQ-eg-ojn" firstAttribute="top" secondItem="Bsf-Km-dBU" secondAttribute="bottom" constant="19" id="gA5-A9-x2J"/>
+                            <constraint firstItem="ch3-qr-ZdF" firstAttribute="top" secondItem="J8b-Un-qvj" secondAttribute="bottom" id="kQ1-f4-vAa"/>
                             <constraint firstAttribute="centerX" secondItem="xnQ-eg-ojn" secondAttribute="centerX" id="nOG-OG-kwl"/>
                             <constraint firstItem="POd-EL-VFo" firstAttribute="top" secondItem="3Mh-gj-TQF" secondAttribute="bottom" constant="8" id="noS-Pz-9K1"/>
                             <constraint firstItem="CO5-dy-VpI" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="sz2-TP-jJm"/>
@@ -278,6 +295,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="hzf-4P-7YB" id="myN-FJ-xNF"/>
+                        <outlet property="userName" destination="J8b-Un-qvj" id="a6h-bj-YWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BX-4b-6tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
