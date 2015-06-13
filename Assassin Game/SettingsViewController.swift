@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -15,20 +16,22 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var userName: UILabel!
     
+    //MARK: - coredata var
+    var players = [NSManagedObject]()    //NSManagedObject: Core Data datatype that is able to store,edit, delete, etc, so use an array in order to store multiple values
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        fetchData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK - IBAction
     
-    //hook up this action in the first responder to the re-take photo button
+    //hook this action up in the first responder to the re-take photo button
     //uses camera to take a new photo
     @IBAction func chooseImageFromCamera(){
         let picker = UIImagePickerController()
@@ -41,15 +44,16 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //save image to uiimage
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        
         imageView.image = (info[UIImagePickerControllerOriginalImage] as! UIImage)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     
     @IBAction func changeNameButton(sender: AnyObject) {
-        //pop up box
+        //create an alert box
         var alert = UIAlertController(title: "Change Name", message: "Enter a new name", preferredStyle: .Alert)
-        //save button
+        //save text from the alert box to a variable
         let saveAction = UIAlertAction(title: "Change", style: .Default )
             { (action) -> Void in
                 
@@ -58,12 +62,12 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
                 {
                     text1.text = self.userName.text!
                 }
-                
                 self.userName.text = text1.text
-                self.userName.reloadInputViews()
+                self.savePlayerName(self.userName.text!)
+                self.userName.reloadInputViews() //update the uiLabel
             }
         
-        //cancel button
+        //cancel action button
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
         
         alert.addTextFieldWithConfigurationHandler(nil)
@@ -74,6 +78,64 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         
     }
+    
+    //MARK: - helper methods
+    
+    func savePlayerName(name: String)
+    {
+        //retrieve manged object context in the app delegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //add an item to the manged item context
+        let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: managedContext)
+        let player =  NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        //set value for the attribute
+        player.setValue(name, forKey: "name")
+        
+        //save the managed object context 
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("could not save \(error), \(error?.userInfo)")
+        }
+        
+        //clears the array until the most recent entry is the only thing left
+        //for data efficieny purposes
+        while (players.count > 0)
+        {
+            players.removeAtIndex(0)
+        }
+        players.append(player)
+        
+        
+        userName.text = players[players.count-1].valueForKey("name") as! String?
+        //userName.text = String(players.count)
+
+    }
    
+    func fetchData()
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext!
+        
+        //fetch request into core data
+        let fetchRequest = NSFetchRequest(entityName: "Player")
+        
+        //execute fetch request
+        var error: NSError?
+        
+        if let fetchedResults = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
+        {
+            //if not nil
+            players = fetchedResults
+        }
+        else {
+            println("could not fetch data \(error), \(error?.userInfo)")
+        }
+        
+        userName.text = players[players.count-1].valueForKey("name") as! String?
+        
+    }
 
 }

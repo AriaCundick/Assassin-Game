@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assassin_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coredatatest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -131,7 +131,7 @@
         <!--Settings Controller-->
         <scene sceneID="G56-js-z0a">
             <objects>
-                <viewController title="Settings Controller" id="0V2-Aj-6TP" customClass="SettingsViewController" customModule="Assassin_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings Controller" id="0V2-Aj-6TP" customClass="SettingsViewController" customModule="coredatatest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bsf-Km-dBU"/>
                         <viewControllerLayoutGuide type="bottom" id="r1r-dC-XUF"/>

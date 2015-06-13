@@ -14,6 +14,7 @@
 		02C710B81B2944880063F559 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C710B61B2944880063F559 /* LaunchScreen.xib */; };
 		02C710C41B2944890063F559 /* Assassin_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C710C31B2944890063F559 /* Assassin_GameTests.swift */; };
 		02C710CE1B295C0C0063F559 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C710CD1B295C0C0063F559 /* SettingsViewController.swift */; };
+		02C846D01B2BB60800041119 /* Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C846CE1B2BB60800041119 /* Player.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		02C710C21B2944890063F559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C710C31B2944890063F559 /* Assassin_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assassin_GameTests.swift; sourceTree = "<group>"; };
 		02C710CD1B295C0C0063F559 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		02C846CF1B2BB60800041119 /* Player.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Player.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				02C710AF1B2944880063F559 /* ViewController.swift */,
 				02C710CD1B295C0C0063F559 /* SettingsViewController.swift */,
 				02C710B11B2944880063F559 /* Main.storyboard */,
+				02C846CE1B2BB60800041119 /* Player.xcdatamodeld */,
 				02C710B41B2944880063F559 /* Images.xcassets */,
 				02C710B61B2944880063F559 /* LaunchScreen.xib */,
 				02C710AB1B2944880063F559 /* Supporting Files */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C846D01B2BB60800041119 /* Player.xcdatamodeld in Sources */,
 				02C710B01B2944880063F559 /* ViewController.swift in Sources */,
 				02C710AE1B2944880063F559 /* AppDelegate.swift in Sources */,
 				02C710CE1B295C0C0063F559 /* SettingsViewController.swift in Sources */,
@@ -415,6 +419,7 @@
 				02C710C91B2944890063F559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02C710CA1B2944890063F559 /* Build configuration list for PBXNativeTarget "Assassin GameTests" */ = {
 			isa = XCConfigurationList;
@@ -423,8 +428,22 @@
 				02C710CC1B2944890063F559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02C846CE1B2BB60800041119 /* Player.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02C846CF1B2BB60800041119 /* Player.xcdatamodel */,
+			);
+			currentVersion = 02C846CF1B2BB60800041119 /* Player.xcdatamodel */;
+			path = Player.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 02C710A01B2944880063F559 /* Project object */;
 }
