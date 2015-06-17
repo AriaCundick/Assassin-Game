@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchData()
+        //fetchData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,12 +58,12 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             { (action) -> Void in
                 
                 var text1 = alert.textFields![0] as! UITextField
-                if text1.text == "" 
+                if text1.text == ""
                 {
                     text1.text = self.userName.text!
                 }
                 self.userName.text = text1.text
-                self.savePlayerName(self.userName.text!)
+                //self.savePlayerName(self.userName.text!)
                 self.userName.reloadInputViews() //update the uiLabel
             }
         
@@ -79,9 +79,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
-    //MARK: - helper methods
+    //MARK: - helper methods for core data
     
-    func savePlayerName(name: String)
+   /* func savePlayerName(name: String)
     {
         //retrieve manged object context in the app delegate
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -108,9 +108,8 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         players.append(player)
         
-        
+        //change the uilabel text
         userName.text = players[players.count-1].valueForKey("name") as! String?
-        //userName.text = String(players.count)
 
     }
    
@@ -125,17 +124,20 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         //execute fetch request
         var error: NSError?
         
-        if let fetchedResults = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
-        {
+         if let fetchedResults = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as? [NSManagedObject]
+         {
             //if not nil
             players = fetchedResults
         }
-        else {
+         else {
             println("could not fetch data \(error), \(error?.userInfo)")
         }
         
-        userName.text = players[players.count-1].valueForKey("name") as! String?
+        //initial start up data assignment
+        //if(players[0].valueForKey("name") != nil){
+            //userName.text = players[players.count-1].valueForKey("name") as! String?
+        //}
         
-    }
+    }*/
 
 }
