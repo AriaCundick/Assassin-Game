@@ -7,17 +7,16 @@
 //
 
 import UIKit
-import CoreData
+//import CoreData
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    //MARK - IBOutlet
-    //pointer to the UIImgview in settings page
+    //MARK - IBOutlet vars
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var userName: UILabel!
     
     //MARK: - coredata var
-    var players = [NSManagedObject]()    //NSManagedObject: Core Data datatype that is able to store,edit, delete, etc, so use an array in order to store multiple values
+    //var players = [NSManagedObject]()    //NSManagedObject: Core Data datatype that is able to store,edit, delete, etc, so use an array in order to store multiple values
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +52,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func changeNameButton(sender: AnyObject) {
         //create an alert box
         var alert = UIAlertController(title: "Change Name", message: "Enter a new name", preferredStyle: .Alert)
+        
         //save text from the alert box to a variable
         let saveAction = UIAlertAction(title: "Change", style: .Default )
             { (action) -> Void in
@@ -74,10 +74,21 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
        
-        presentViewController(alert, animated: true, completion: nil)
+        //present the alert box
+        self.presentViewController(alert, animated: true, completion: nil)
         
         
     }
+    
+    @IBAction func btnLogout_Clicked(sender: AnyObject) {
+        
+        //add logout code later
+        
+        //transition to login screen
+        let VC = self.storyboard!.instantiateViewControllerWithIdentifier("Login") as! UINavigationController
+        self.presentViewController(VC, animated: true, completion: nil)
+    }
+    
     
     //MARK: - helper methods for core data
     

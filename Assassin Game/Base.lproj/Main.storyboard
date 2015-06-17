@@ -400,6 +400,18 @@
                                     <action selector="changeNameButton:" destination="0V2-Aj-6TP" eventType="touchUpInside" id="jXX-AP-cFq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi2-yN-ZN1">
+                                <rect key="frame" x="90" y="585" width="194" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3hI-4X-QyH"/>
+                                    <constraint firstAttribute="width" constant="194" id="dwL-ar-wqt"/>
+                                </constraints>
+                                <state key="normal" title="Connect to Social Media">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66810778479999999" green="1" blue="0.84026733980000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -420,8 +432,10 @@
                             <constraint firstItem="kzt-gb-2F2" firstAttribute="top" secondItem="hzf-4P-7YB" secondAttribute="bottom" constant="59" id="ZL3-UY-g65"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7ra-Lp-FPI" secondAttribute="trailing" constant="48" id="ZSi-fl-yfQ"/>
                             <constraint firstItem="7ra-Lp-FPI" firstAttribute="top" secondItem="DLB-CY-2lL" secondAttribute="bottom" constant="8" id="bCy-vI-51g"/>
+                            <constraint firstAttribute="centerX" secondItem="mi2-yN-ZN1" secondAttribute="centerX" id="boU-PJ-vsZ"/>
                             <constraint firstItem="DLB-CY-2lL" firstAttribute="top" secondItem="97P-pL-fib" secondAttribute="bottom" constant="8" id="dFS-5t-OqG"/>
                             <constraint firstItem="3Mh-gj-TQF" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="8" id="eI5-Fb-EWd"/>
+                            <constraint firstAttribute="centerX" secondItem="mi2-yN-ZN1" secondAttribute="centerX" constant="-45.5" id="eJQ-YC-opm"/>
                             <constraint firstItem="J8b-Un-qvj" firstAttribute="top" secondItem="xnQ-eg-ojn" secondAttribute="bottom" constant="18" id="f1v-6P-Vku"/>
                             <constraint firstItem="xnQ-eg-ojn" firstAttribute="top" secondItem="Bsf-Km-dBU" secondAttribute="bottom" constant="19" id="gA5-A9-x2J"/>
                             <constraint firstItem="ch3-qr-ZdF" firstAttribute="top" secondItem="J8b-Un-qvj" secondAttribute="bottom" id="kQ1-f4-vAa"/>
@@ -430,9 +444,24 @@
                             <constraint firstItem="CO5-dy-VpI" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="sz2-TP-jJm"/>
                             <constraint firstItem="gHO-zn-tTr" firstAttribute="top" secondItem="hzf-4P-7YB" secondAttribute="bottom" constant="8" id="vGn-WW-jq9"/>
                             <constraint firstItem="CO5-dy-VpI" firstAttribute="top" secondItem="kXv-f5-v4I" secondAttribute="bottom" constant="8" id="vuw-HB-hZz"/>
+                            <constraint firstItem="r1r-dC-XUF" firstAttribute="top" secondItem="mi2-yN-ZN1" secondAttribute="bottom" constant="8" id="wqe-aH-7FO"/>
                             <constraint firstItem="kXv-f5-v4I" firstAttribute="leading" secondItem="H9L-fq-ZYt" secondAttribute="leadingMargin" constant="46" id="yCV-cn-3Om"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eJQ-YC-opm"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="wS2-in-ACY">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="Fmh-nR-s3J">
+                            <connections>
+                                <action selector="btnLogout_Clicked:" destination="0V2-Aj-6TP" id="gaN-lo-iM9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="hzf-4P-7YB" id="myN-FJ-xNF"/>
@@ -543,7 +572,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xBi-YJ-pZU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dfk-aT-Ubq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Login" automaticallyAdjustsScrollViewInsets="NO" id="dfk-aT-Ubq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYV-Pn-lp6">

@@ -27,15 +27,18 @@ class LoginViewController: UIViewController {
     }
     
 
+    //MARK: - IBAction functions
+    
     @IBAction func btnLogin_Clicked(sender: AnyObject) {
         
         //add code to validate credentials later
         
         //transition to main screen
         let VC = self.storyboard!.instantiateViewControllerWithIdentifier("Main") as! UINavigationController
-        
+        VC.modalTransitionStyle = .CrossDissolve
         self.presentViewController(VC, animated: true, completion: nil)
-        
+        //self.navigationController!.pushViewController(VC, animated: true)
+        //self.navigationController!.performSegueWithIdentifier("Main", sender: sender)
 
     }
    

@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //dsfgafgesa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,8 +18,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //asodfijaoidfj
-    //ARIA N00B
+    
 
 }
 
